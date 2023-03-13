@@ -2,7 +2,7 @@
 - name: Hello Events Mulitple Jobs
   hosts: all
   sources:
-    - benthomasson.eda.range:
+    - ansible.eda.range:
         limit: 10
         delay: 1
   rules:
@@ -10,5 +10,5 @@
       condition: event.i > 1
       action:
         run_playbook:
-          name: benthomasson.eda.hello
+          name: ansible.eda.hello
 ...
